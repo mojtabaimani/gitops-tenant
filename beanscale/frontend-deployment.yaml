@@ -16,7 +16,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: ghcr.io/tsclabs-eu/demo-app-frontend:0.7.0
+      - image: europe-west4-docker.pkg.dev/kuberise-demo/ghcr/tsclabs-eu/demo-app-frontend:0.7.0
         name: demo-app-frontend
         ports:
         - containerPort: 3000

@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccountName: backend
       containers:
-      - image: ghcr.io/tsclabs-eu/demo-app-backend:0.7.0
+      - image: europe-west4-docker.pkg.dev/kuberise-demo/ghcr/tsclabs-eu/demo-app-backend:0.7.0
         name: demo-app-backend
         ports:
         - containerPort: 8080
@@ -29,7 +29,7 @@ spec:
         - name: DISPATCH_SCHEDULER_INTERVAL
           value: 20s
         - name: DISPATCH_JOB_IMAGE
-          value: ghcr.io/tsclabs-eu/demo-app-backend:0.6.0
+          value: europe-west4-docker.pkg.dev/kuberise-demo/ghcr/tsclabs-eu/demo-app-backend:0.7.0
         - name: DISPATCH_JOB_BACKEND_URL
           value: http://backend:8080
         envFrom:

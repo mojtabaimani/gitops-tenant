@@ -20,6 +20,15 @@ spec:
         name: demo-app-backend
         ports:
         - containerPort: 8080
+        env:
+        - name: DISPATCH_EXECUTOR
+          value: kubernetes
+        - name: DISPATCH_SCHEDULER_INTERVAL
+          value: 20s
+        - name: DISPATCH_JOB_IMAGE
+          value: ghcr.io/tsclabs-eu/demo-app-backend:0.6.0
+        - name: DISPATCH_JOB_BACKEND_URL
+          value: http://backend:8080
         envFrom:
         - secretRef:
             name: jwt-secret

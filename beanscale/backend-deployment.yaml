@@ -23,7 +23,7 @@ spec:
         - containerPort: 8080
         env:
         - name: DISPATCH_JOB_SERVICE_ACCOUNT
-              value: dispatch-cycle
+          value: dispatch-cycle
         - name: DISPATCH_EXECUTOR
           value: kubernetes
         - name: DISPATCH_SCHEDULER_INTERVAL
